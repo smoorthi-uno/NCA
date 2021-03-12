@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'nca/base.html' %}
+
+{% block content %}
+<div class="client-entry">
+
+  <h2>Name: {{ activity.name }}</h2>
+    <p>Location: {{ activity.location }} </p>
+    <p>Description:{{ activity.description }}</p>
+    <p>Type: {{ activity.type }}</p>
+    <p>Start Date: {{ activity.start_date }}</p>
+    <p>End Date{{ activity.end_date }}</p>
+    <p>Created date:{{ activity.created_date }}</p>
+    <p>Updated date:{{ activity.updated_date }}</p>
+    <p>Notes: {{ activity.notes }}</p>
+  </div>
+
+    <p><button type="submit" class="btn btn-success" style="font-weight: bold;color: black"><a href="{% url 'nca:activity_edit' activity.pk %}">Edit</a></button></p>
+  <p><button type="submit" class="btn btn-success" style="font-weight: bold;color: black"><a href="{% url 'nca:activity_list' %}">Back To</a><button</p>
+{% endblock content %}
+</html>

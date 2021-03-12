@@ -1,0 +1,76 @@
+{% load static %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+<html lang="en">
+<style>
+
+     *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+     }
+     nav{
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         min-height: 8vh;
+         background-color: #939597;
+         font-family: 'Poppins',sans-serif;
+         {##838e9e;#c4baa3;#}
+     }
+     .img{
+     }
+     .logo{
+         text-align: center;
+         font-size: xx-large;
+         color:White;
+         width: 40%;
+         letter-spacing: 2px;
+     }
+     body{
+         background-image:url("");
+     }
+</style>
+<head>
+    <title>base</title>
+</head>
+<body>
+    <nav>
+        <div class=img>
+            <a href="#"><img src="{% static "images/logo.png" %}" alt="" width="100" height="140"></a>
+        </div>
+        <div class="logo">
+            <h3>Nebraska Cancer Association</h3>
+        </div>
+        <ul>
+        <div>
+            {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}"><span
+                    class="btn btn-primary" style="  background-color: #343148; /* Green */
+                                          border: none;
+                                          color: white;
+                                          padding: 15px 32px;
+                                          text-align: center;
+                                          text-decoration: none;
+                                          display: inline-block;
+                                          font-size: 16px;">logout</span></a>
+            {% else %}
+                <a href="{% url 'login' %}"><span
+                    class="btn btn-primary" style="  background-color: #343148; /* Green */
+                                          border: none;
+                                          color: white;
+                                          padding: 15px 32px;
+                                          text-align: center;
+                                          text-decoration: none;
+                                          display: inline-block;
+                                          font-size: 16px;">login</span></a>
+            {% endif %}
+        </div>
+        </ul>
+
+    </nav>
+{#    <button><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></button>#}
+{% block content %}
+{%endblock%}
+</body>
+</html>

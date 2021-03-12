@@ -1,0 +1,60 @@
+{% extends 'nca/base.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+{% block content %}
+   <html lang="">
+   <style>
+       *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+       }
+       nav1{
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         min-height: 8vh;
+         background-color: #9F9C99;
+         font-family: 'Poppins',sans-serif;
+         {##838e9e;#c4baa3;#}
+        }
+       .nav1-links{
+           display: flex;
+           justify-content: space-around;
+           width: 50%;
+
+       }
+       .nav1-links li{
+           list-style: none;
+       }
+       .nav1-links a{
+           color: white;
+           text-decoration: none;
+           letter-spacing: 3px;
+           font-weight: bold;
+           font-size: x-large;
+       }
+
+   </style>
+   <head>
+       <title>Home Page</title>
+   </head>
+    <body1>
+    <br>
+    <nav1>
+        <ul class="nav1-links">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+            </li>
+            <li>
+                <a href="#">Contact Us</a>
+            </li>
+
+        </ul>
+    </nav1>
+    </body1>
+   </html>
+{% endblock %}
