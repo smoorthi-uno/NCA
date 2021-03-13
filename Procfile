@@ -1,1 +1,1 @@
-web: gunicorn msd-nca.wsgi --log-file -
+web: gunicorn ISQA8210_T1_NCACMS.wsgi --log-file -
