@@ -1,1 +1,1 @@
-web: gunicorn nca.wsgi --log-file -
+web: gunicorn msd-nca.wsgi --log-file -
